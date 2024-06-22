@@ -4,11 +4,22 @@
 }
 
 .mentorship {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     border: 3px solid #7124EF;
     box-shadow: 5px 8px 2px #7124EF;
+    background-color: rgba(14, 14, 14, 0.5);
 }
 
 .workshops {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     border: 3px solid #00FFD1;
     box-shadow: 5px 8px 2px #00FFD1;
 }
@@ -17,6 +28,10 @@
     display: grid;
     place-items: center;
     gap: 5em;
+}
+
+.heading-svg img{
+    max-height: 30vh;
 }
 
 h4 {
@@ -43,7 +58,7 @@ button {
     border: 2px solid #00FFD1;
     box-shadow: 3px 3px 1px #00FFD1;
 }
- 
+
 h6 {
     margin-bottom: 1em;
     font-weight: 500;
@@ -52,4 +67,43 @@ h6 {
 
 button {
     cursor: pointer;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap:3em;
+    /* padding: 0em 6em; */
+}
+
+.fade-down{
+  animation: fade-down 1s;
+}
+
+.fade-up{
+  animation: fade-up 1s;
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
 }
